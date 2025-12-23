@@ -1600,15 +1600,15 @@ body.light-mode .theme-toggle-btn:hover {
     overflow-y: auto;
 }
 
-/* 3. Yearly Chart - Top Center (ALIGNED) */
+/* 3. Yearly Chart - Left Column (below Details) */
 .panel-bottom-left-small {
-    top: 30px;
-    left: 530px;
-    /* Detay panelinin (480px) sağında + 50px boşluk */
-    width: 450px;
-    /* Diğer orta panellerle aynı genişlik */
+    top: 900px;
+    /* Below Details Table (330 + 550 + 20 spacing) */
+    left: 24px;
+    width: 480px;
+    /* Same width as Details Table */
     height: 280px;
-    z-index: 160;
+    z-index: 100;
 }
 
 /* ============================================
@@ -1619,8 +1619,8 @@ body.light-mode .theme-toggle-btn:hover {
 .panel-ranking-2021 {
     top: 30px;
     right: 24px;
-    width: 500px;
-    /* 600px -> 500px (Sığması için küçültüldü) */
+    width: 600px;
+    /* 700px → 600px: 100px küçültüldü */
     height: 210px;
     z-index: 100;
 }
@@ -1628,8 +1628,10 @@ body.light-mode .theme-toggle-btn:hover {
 /* 2. 2022 Ranking - Sağ Üst-Orta */
 .panel-ranking-2022 {
     top: 250px;
+    /* 260px → 250px: Aralar 10px boşluk */
     right: 24px;
-    width: 500px;
+    width: 600px;
+    /* 700px → 600px: 100px küçültüldü */
     height: 210px;
     z-index: 100;
 }
@@ -1637,8 +1639,10 @@ body.light-mode .theme-toggle-btn:hover {
 /* 3. 2023 Ranking - Sağ Orta */
 .panel-ranking-2023 {
     top: 470px;
+    /* 490px → 470px: Aralar 10px boşluk */
     right: 24px;
-    width: 500px;
+    width: 600px;
+    /* 700px → 600px: 100px küçültüldü */
     height: 210px;
     z-index: 100;
 }
@@ -1646,19 +1650,20 @@ body.light-mode .theme-toggle-btn:hover {
 /* 4. 2024 Ranking - Sağ Alt */
 .panel-ranking-2024 {
     top: 690px;
+    /* 720px → 690px: Aralar 10px boşluk, 30px yukarı çekildi */
     right: 24px;
-    width: 500px;
+    width: 600px;
+    /* 700px → 600px: 100px küçültüldü */
     height: 210px;
     z-index: 100;
 }
 
-/* 5. Kritik Olaylar (Negatif) - Orta */
+/* 5. Kritik Olaylar (Negatif) - Left Column (below Yearly Chart) */
 .panel-bottom-right {
-    top: 330px;
-    left: 530px;
-    /* Yearly chart ile hizalı */
-    width: 450px;
-    /* 480px -> 450px */
+    top: 1200px;
+    /* Below Yearly Chart (900 + 280 + 20 spacing) */
+    left: 24px;
+    width: 480px;
     height: 285px;
     z-index: 100;
 }
@@ -1669,13 +1674,12 @@ body.light-mode .theme-toggle-btn:hover {
     overflow-y: auto;
 }
 
-/* 6. Olumlu Gelişmeler (Pozitif) - Orta Alt */
+/* 6. Olumlu Gelişmeler (Pozitif) - Left Column (below Critical) */
 .panel-bottom-center {
-    top: 625px;
-    left: 530px;
-    /* Yearly chart ile hizalı */
-    width: 450px;
-    /* 480px -> 450px */
+    top: 1505px;
+    /* Below Critical Events (1200 + 285 + 20 spacing) */
+    left: 24px;
+    width: 480px;
     height: 255px;
     z-index: 100;
 }
