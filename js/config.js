@@ -204,6 +204,8 @@ const AppConfig = {
             : 'https://raw.githubusercontent.com/mcysidh/ahmet/main/Veri/',
         files: [
             'countries.geo.json', // Bu dosya şifrelenmeyecek (boyut nedeniyle)
+            // Ülke isim sözlüğü (opsiyonel ama uzak yükleme için listeye ekliyoruz)
+            'ülkesözlük.xlsx.enc',
             'ulkeler.xlsx.enc',
             'ulke_detaylari.csv.enc',
             'veriler_2021.xlsx.enc',
