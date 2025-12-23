@@ -1600,15 +1600,13 @@ body.light-mode .theme-toggle-btn:hover {
     overflow-y: auto;
 }
 
-/* 3. Yearly Chart - Left Column (below Details) */
+/* 3. Yearly Chart - Middle Column (Column 2) */
 .panel-bottom-left-small {
-    top: 900px;
-    /* Below Details Table (330 + 550 + 20 spacing) */
-    left: 24px;
-    width: 480px;
-    /* Same width as Details Table */
+    top: 30px;
+    left: 460px;
+    width: 320px;
     height: 280px;
-    z-index: 100;
+    z-index: 160;
 }
 
 /* ============================================
@@ -1620,7 +1618,6 @@ body.light-mode .theme-toggle-btn:hover {
     top: 30px;
     right: 24px;
     width: 600px;
-    /* 700px → 600px: 100px küçültüldü */
     height: 210px;
     z-index: 100;
 }
@@ -1628,10 +1625,8 @@ body.light-mode .theme-toggle-btn:hover {
 /* 2. 2022 Ranking - Sağ Üst-Orta */
 .panel-ranking-2022 {
     top: 250px;
-    /* 260px → 250px: Aralar 10px boşluk */
     right: 24px;
     width: 600px;
-    /* 700px → 600px: 100px küçültüldü */
     height: 210px;
     z-index: 100;
 }
@@ -1639,10 +1634,8 @@ body.light-mode .theme-toggle-btn:hover {
 /* 3. 2023 Ranking - Sağ Orta */
 .panel-ranking-2023 {
     top: 470px;
-    /* 490px → 470px: Aralar 10px boşluk */
     right: 24px;
     width: 600px;
-    /* 700px → 600px: 100px küçültüldü */
     height: 210px;
     z-index: 100;
 }
@@ -1650,19 +1643,16 @@ body.light-mode .theme-toggle-btn:hover {
 /* 4. 2024 Ranking - Sağ Alt */
 .panel-ranking-2024 {
     top: 690px;
-    /* 720px → 690px: Aralar 10px boşluk, 30px yukarı çekildi */
     right: 24px;
     width: 600px;
-    /* 700px → 600px: 100px küçültüldü */
     height: 210px;
     z-index: 100;
 }
 
-/* 5. Kritik Olaylar (Negatif) - Left Column (below Yearly Chart) */
+/* 5. Kritik Olaylar (Negatif) - Middle Column (Column 2) */
 .panel-bottom-right {
-    top: 1200px;
-    /* Below Yearly Chart (900 + 280 + 20 spacing) */
-    left: 24px;
+    top: 330px;
+    left: 510px;
     width: 480px;
     height: 285px;
     z-index: 100;
@@ -1674,11 +1664,10 @@ body.light-mode .theme-toggle-btn:hover {
     overflow-y: auto;
 }
 
-/* 6. Olumlu Gelişmeler (Pozitif) - Left Column (below Critical) */
+/* 6. Olumlu Gelişmeler (Pozitif) - Middle Column (Column 2) */
 .panel-bottom-center {
-    top: 1505px;
-    /* Below Critical Events (1200 + 285 + 20 spacing) */
-    left: 24px;
+    top: 625px;
+    left: 510px;
     width: 480px;
     height: 255px;
     z-index: 100;
