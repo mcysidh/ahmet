@@ -960,12 +960,18 @@ const UIManager = {
             bubbleWrapper.appendChild(valueLabel);
 
             // Pozisyonu uygula (absolute positioning) - SADECE DESKTOP'TA
-            // Mobilde (768px ve altı) CSS Grid kullanılacak
+            // Mobilde (768px ve altı) CSS Flexbox kullanılacak
             if (positions[index] && window.innerWidth > 768) {
                 bubbleWrapper.style.position = 'absolute';
                 bubbleWrapper.style.left = `${positions[index].x}px`;
                 bubbleWrapper.style.top = `${positions[index].y}px`;
                 bubbleWrapper.style.transform = 'translate(-50%, -50%)';
+            } else {
+                // Mobilde inline style'ları temizle - CSS'in çalışmasını sağla
+                bubbleWrapper.style.position = '';
+                bubbleWrapper.style.left = '';
+                bubbleWrapper.style.top = '';
+                bubbleWrapper.style.transform = '';
             }
 
             container.appendChild(bubbleWrapper);
