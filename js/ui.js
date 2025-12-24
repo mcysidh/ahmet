@@ -884,6 +884,11 @@ const UIManager = {
         const legend = document.getElementById('analysis-legend');
         if (!container || !AppState.analysisMetric) return;
 
+        // Tüm child elementleri güvenli bir şekilde temizle
+        while (container.firstChild) {
+            container.removeChild(container.firstChild);
+        }
+        // innerHTML'i de temizle (ekstra güvenlik için)
         container.innerHTML = '';
 
         // Tüm ülkeleri topla ve değerleri hesapla
