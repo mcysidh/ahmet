@@ -959,8 +959,9 @@ const UIManager = {
             bubbleWrapper.appendChild(bubble);
             bubbleWrapper.appendChild(valueLabel);
 
-            // Pozisyonu uygula (absolute positioning)
-            if (positions[index]) {
+            // Pozisyonu uygula (absolute positioning) - SADECE DESKTOP'TA
+            // Mobilde (768px ve altı) CSS Grid kullanılacak
+            if (positions[index] && window.innerWidth > 768) {
                 bubbleWrapper.style.position = 'absolute';
                 bubbleWrapper.style.left = `${positions[index].x}px`;
                 bubbleWrapper.style.top = `${positions[index].y}px`;
@@ -978,6 +979,12 @@ const UIManager = {
         const positions = [];
         const container = document.getElementById('analysis-bubbles-container');
         if (!container) return positions;
+
+        // MOBİL KONTROLÜ: 768px ve altında CSS Grid kullan, pozisyon hesaplama
+        if (window.innerWidth <= 768) {
+            // Mobilde pozisyon hesaplama yapma, CSS Grid'e bırak
+            return positions; // Boş array döndür
+        }
 
         // Container'ın gerçek boyutlarını al (padding dahil)
         const containerWidth = container.clientWidth || window.innerWidth;
