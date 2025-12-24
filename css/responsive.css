@@ -320,16 +320,17 @@
         margin-top: 0;
         margin-bottom: 60px;
         padding: var(--space-4);
-        display: grid;
+        display: grid !important;
         grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
         gap: var(--space-4);
         align-items: start;
         overflow-y: auto;
-        height: calc(100vh - 250px);
-        /* Yükseklik belirtildi - scroll için */
+        height: auto !important;
+        /* Otomatik yükseklik - içerik kadar büyüsün */
         max-height: calc(100vh - 250px);
         -webkit-overflow-scrolling: touch;
-        /* iOS için smooth scroll */
+        position: relative;
+        /* Absolute çocukları relative yap */
     }
 
     /* Ülke Balonları - Mobil */
@@ -337,11 +338,15 @@
         position: relative !important;
         top: auto !important;
         left: auto !important;
+        transform: none !important;
+        /* Transform'u kaldır */
         width: 100% !important;
         height: 100px !important;
         aspect-ratio: 1;
         font-size: 12px;
         padding: var(--space-2);
+        margin: 0 !important;
+        /* Margin'i sıfırla */
     }
 
     /* Legend - Mobil */
@@ -523,8 +528,7 @@
     .analysis-bubbles-container {
         grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
         gap: var(--space-3);
-        height: calc(100vh - 230px);
-        /* Daha küçük ekran için */
+        height: auto !important;
         max-height: calc(100vh - 230px);
     }
 
@@ -570,8 +574,7 @@
     /* Analiz Bubbles - Landscape */
     .analysis-bubbles-container {
         grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
-        height: calc(100vh - 200px);
-        /* Landscape için */
+        height: auto !important;
         max-height: calc(100vh - 200px);
     }
 
@@ -615,8 +618,7 @@
     .analysis-bubbles-container {
         grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
         gap: var(--space-5);
-        height: calc(100vh - 220px);
-        /* Tablet için */
+        height: auto !important;
         max-height: calc(100vh - 220px);
     }
 
