@@ -1,0 +1,6 @@
+{
+  "offline_mode": true,
+  "tile_server": "local",
+  "assets_folder": "offline_assets",
+  "fallback_enabled": true
+}
